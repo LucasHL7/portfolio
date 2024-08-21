@@ -1,0 +1,158 @@
+
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.lh-contato button{
+    padding: 10px 40px;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: gray;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.lh-contato button:hover{
+    box-shadow: 0px 0px 8px rgb(51, 47, 47);
+    transform: scale(1.05);
+}
+
+h2.titulo{
+    color: aliceblue;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: rgb(92, 92, 106);
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header{
+    padding: 40px 4% 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+header a{
+    color: rgb(81, 147, 197);
+    text-decoration-line: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: aliceblue;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: nome;
+}
+
+header nav li{
+    display: inline-block;
+    padding: 0px 40px;
+    font-size: 20px;
+}
+
+
+
+
+/* ESTILO DO TOPO DO SITE */
+
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    
+}
+
+.topo-do-site .txt-topo-site h1{
+    color: aliceblue;
+    font-size: 38px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: aliceblue;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* ESTILO DAS ESPECIALIDADES */
+
+section.esp{
+    padding: 40px 4%;
+}
+
+section.esp .flex{
+    gap: 60px;
+}
+
+.esp .esp-box{
+    color: aliceblue;
+    padding: 40px;
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.esp .esp-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(240, 248, 255, 0.527);
+}
+    
+.esp .esp-box i{
+    font-size: 70px;
+    color: rgb(92, 92, 106);
+}
+
+.esp .esp-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
