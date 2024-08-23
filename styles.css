@@ -33,10 +33,6 @@ body{
     transition: .2s;
 }
 
-.lh-contato button:hover{
-    box-shadow: 0px 0px 8px rgb(51, 47, 47);
-    transform: scale(1.05);
-}
 
 h2.titulo{
     color: aliceblue;
@@ -46,6 +42,11 @@ h2.titulo{
 
 h2.titulo span{
     color: rgb(92, 92, 106);
+}
+
+button:hover{
+    box-shadow: 0px 0px 8px rgb(251, 8, 8);
+    transform: scale(1.05);
 }
 
 /* ESTILO DO CABEÇALHO */
@@ -102,11 +103,13 @@ section.topo-do-site .flex{
 .topo-do-site .txt-topo-site h1{
     color: aliceblue;
     font-size: 38px;
+    
 }
 
 .topo-do-site .txt-topo-site p{
     color: aliceblue;
     margin: 40px 0;
+    text-align: justify;
 }
 
 .topo-do-site .img-topo-site{
@@ -159,6 +162,42 @@ section.esp .flex{
 
 /* SOBRE */
 
-.img-sobre{
-    
+section.sobre{
+    padding: 80px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: aliceblue;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color:  rgba(240, 248, 255, 0.527);
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.sobre .txt-sobre .btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: darkgray;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
 }
