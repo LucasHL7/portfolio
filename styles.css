@@ -201,3 +201,52 @@ section.sobre .flex{
     margin: 0 5px;
     transition: .2s;
 }
+
+/* ESTILO DO PORTIFOLIO */
+
+section.portifolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px;
+    color: #ffffff1d;
+}
+
+section.portifolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 0%;
+    transition: 5s;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100%;
+}
+
+.overlai{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.468);
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlai:hover{
+    opacity: 1;
+}
