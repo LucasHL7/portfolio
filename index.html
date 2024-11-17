@@ -25,52 +25,46 @@
 <body>
     <header>
         <div class="interface"><!--interface-->
-            <div class="logo"><!--logo-->
-                <a href="a">
-                    <img src="./imagens/logo.png" alt="Logo" </a>
-            </div> <!--logo-->
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="a">Inicio</a></li>
-                    <li><a href="a">Sobre</a></li>
-                    <li><a href="a">Especialidades</a></li>
-                    <li><a href="a">Projetos</a></li>
+                    <li><a href="#sob">Inicio</a></li>
+                    <li><a href="#sob">Sobre</a></li>
+                    <li><a href="#especi">Especialidades</a></li>
+                    <li><a href="#port">Projetos</a></li>
                 </ul>
             </nav>
 
             <div class="lh-contato">
-                <a href="a">
+                <a href="#cont">
                     <button>contato</button>
                 </a>
             </div>
         </div> <!--interface-->
     </header>
     <main>
-        <section class="topo-do-site">
-
+        <section class="sobre" id="sob">
             <div class="interface">
                 <div class="flex">
-                    <div class="txt-topo-site">
-                        <h1>Transformando ideias em realidade digital<span>.</span></h1>
-                        <p>A tecnologia é um campo em constante evolução que transforma a maneira como vivemos,
-                            trabalhamos e nos comunicamos. Desde a invenção do computador até a era da inteligência
-                            artificial, a tecnologia tem sido um motor de inovação e progresso.</p>
-                        <div class="lh-contato">
-                            <a href="a">
-                                <button>Entre em Contato</button>
-                            </a>
-                        </div>
+                    <div class="img-sobre">
+                        <img src="imagens/fotom.png" alt="">
                     </div>
+                    <div class="txt-sobre">
+                        <h2>MUITO PRAZER,<span>SOU LUCAS HENRIQUE</span> </h2>
+                        <p>Moro na zona sudeste de Teresina-Pi, tenho 22 anos e estou buscando trabalhar na área de tecnologia e desenvolvimento de sistemas. Tenho formação em Ciências da computação e programação sempre foi meu principal interesse dentre as muitas opções que o meu curso me apresentou. Busco agregar positivamente na empresa que irei trabalhar, sempre focando na produtividade e eficiência na realização tarefas.</p>
+                        <p>Sou uma pessoa versátil, pontual e responsável, querendo sempre manter o ambiente de trabalho organizado e agradável a todos os meus colegas.</p>
 
-                    <div class="img-topo-site">
-                        <img src="./imagens/foto.gif" alt="">
+                        <div class="btn-social">
+                            <a href="https://github.com/LucasHL7"><button><i class="bi bi-github"></i></button></a>
+                            <a href="https://www.linkedin.com/in/lucas-henrique-963a72211/"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://www.instagram.com/lucashls_0/"><button><i class="bi bi-instagram"></i></button></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="esp">
+        <section class="esp" id="especi">
             <div class=" interface">
                 <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
                 <div class="flex">
@@ -99,55 +93,33 @@
                 </div>
         </section>
 
-        <section class="sobre">
-            <div class="interface">
-                <div class="flex">
-                    <div class="img-sobre">
-                        <img src="imagens/fotom.png" alt="">
-                    </div>
-                    <div class="txt-sobre">
-                        <h2>MUITO PRAZER,<span>SOU LUCAS HENRIQUE</span> </h2>
-                        <p>Moro na zona sudeste de Teresina-Pi, tenho 22 anos e estou buscando trabalhar na área de tecnologia e desenvolvimento de sistemas. Tenho formação em Ciências da computação e programação sempre foi meu principal interesse dentre as muitas opções que o meu curso me apresentou. Busco agregar positivamente na empresa que irei trabalhar, sempre focando na produtividade e eficiência na realização tarefas.</p>
-                        <p>Sou uma pessoa versátil, pontual e responsável, querendo sempre manter o ambiente de trabalho organizado e agradável a todos os meus colegas.</p>
+        
 
-                        <div class="btn-social">
-                            <a href="https://github.com/LucasHL7"><button><i class="bi bi-github"></i></button></a>
-                            <a href="https://www.linkedin.com/in/lucas-henrique-963a72211/"><button><i class="bi bi-linkedin"></i></button></a>
-                            <a href="https://www.instagram.com/lucashls_0/"><button><i class="bi bi-instagram"></i></button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="portifolio">
+        <section class="portifolio" id="port">
             <div class="interface">
                 <h2 class="titulo">MEU <SPan>PORTIFOLIO</SPan></h2>
                 <div class="flex">
                     <div class="img-port" style="background-image: url(./imagens/projeto1.png);">
-                        <div class="overlai">Projeto 1</div>
+                        <a href="https://github.com/LucasHL7/mostruario-de-imagens"><button class="overlai">Projeto 1</button></a>
                     </div>
-                    <div class="img-port">
-                        <div class="overlai">Projeto 2</div>
+                    <div class="img-port" style="background-image: url(./imagens/gsenha.jpg);">
+                        <a href="https://github.com/LucasHL7/gsenha"><button class="overlai">Projeto 2</button></a>
                     </div>
-                    <div class="img-port">
-                        <div class="overlai">Projeto 3</div>
+                    <div class="img-port" style="background-image: url(./imagens/site_receita.png);">
+                        <a href="https://github.com/LucasHL7/site-receita"><button class="overlai">Projeto 3</button></a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="formulario">
+        <section class="contat" id="cont">
             <div class="interface">
                 <h2 class="titulo">FALE <span>COMIGO.</span></h2>
-                <form action="" method="post" action="envia.php">
-                    <input type="text" name="" id="" name="nome" placeholder="Seu Nome" required>
-                    <input type="text" name="" id="" name="email" placeholder="Seu Email" required>
-                    <input type="text" name="" id="" name="telefone" placeholder="Seu Celular">
-                    <textarea name="" id="" placeholder="sua mensagem" required></textarea>
-                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
-                    
-                </form>
+
+                <div class="container">
+                    <img src="./imagens/qrcdode.png">
+                </div>
+            
             </div>
         </section>
     </main>
