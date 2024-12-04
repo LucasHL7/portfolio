@@ -75,15 +75,15 @@ header nav li{
 
 /* ESTILO DAS ESPECIALIDADES */
 
-section.esp{
+section.esp , .tec{
     padding: 40px 4%;
 }
 
-section.esp .flex{
+section.esp .flex , .tec{
     gap: 60px;
 }
 
-.esp .esp-box{
+.esp .esp-box, .tec {
     color: aliceblue;
     padding: 40px;
     margin-top: 45px;
@@ -96,14 +96,28 @@ section.esp .flex{
     box-shadow: 0 0 15px rgba(240, 248, 255, 0.527);
 }
     
-.esp .esp-box i{
+.esp .esp-box i , .tec i {
     font-size: 70px;
     color: rgb(92, 92, 106);
 }
 
-.esp .esp-box h3{
+.esp .esp-box h3 , .tec h3{
     font-size: 28px;
     margin: 15px 0;
+}
+
+.tec-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.tec .tec-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
 }
 
 /* SOBRE */
