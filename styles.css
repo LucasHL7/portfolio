@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: #0a192f;
+    background: linear-gradient(to right, #150324, #230c4e);
     height: 100vh;
 }
 
@@ -51,7 +51,7 @@ header > .interface{
 }
 
 header a{
-    color: rgb(86, 97, 105);
+    color: rgb(155, 165, 173);
     text-decoration-line: none;
     display: inline-block;
     transition: .2s;
@@ -69,7 +69,7 @@ header nav ul{
 header nav li{
     display: inline-block;
     padding: 0px 40px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 
@@ -124,6 +124,10 @@ section.esp .flex , .tec{
 
 section.sobre{
     padding: 80px 4%;
+}
+
+.fotomi{
+    border-radius: 40px;
 }
 
 section.sobre .flex{
