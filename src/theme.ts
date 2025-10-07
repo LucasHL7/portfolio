@@ -3,7 +3,7 @@ import { createTheme, responsiveFontSizes } from "@mui/material";
 let theme = createTheme({
     palette:{
         primary: {
-            main: '#282c34',
+            main: '#9ca2ad',
         },
         secondary:{
             main: '#424651',
@@ -13,6 +13,7 @@ let theme = createTheme({
             fontFamily: "SUSE Mono",
     },
 });
+
 
 theme = responsiveFontSizes(theme);
 
