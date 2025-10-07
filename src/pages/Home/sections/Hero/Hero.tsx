@@ -49,7 +49,7 @@ const Hero = () => {
                         </Grid>
                         <Grid size={{ xs: 12, md: 8}} >
                             <Typography color="primary" variant="h1" textAlign={"center"}>Lucas Henrique</Typography>
-                            <Typography color="secondary" variant="h2" textAlign={"center"} paddingBottom={"2"}>I'm a Front-end developer</Typography>
+                            <Typography color="secondary" variant="h2" textAlign={"center"} paddingBottom={"5px"}>I'm a Front-end developer</Typography>
 
                             <Grid container display={"flex"} justifyContent={"center"} spacing={3}>
                                 <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"}>
