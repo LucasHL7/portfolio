@@ -1,7 +1,6 @@
 import { AppBar, Box, Button, Menu, MenuItem, MenuList, styled, Toolbar } from "@mui/material"
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
-import { border, borderRadius, color, minWidth, padding } from "@mui/system";
 
 const NavBar = () => {
 
