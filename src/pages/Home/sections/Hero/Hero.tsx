@@ -1,8 +1,9 @@
 import { styled } from "@mui/system"
-import { Box, Container, Grid, Typography } from "@mui/material"
+import { Box, Container, Grid, Modal, Typography } from "@mui/material"
 import Avatar from "../../../../assets/images/profile.png"
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
+import { useState } from "react";
 
 
 const Hero = () => {
@@ -26,6 +27,7 @@ const Hero = () => {
         alignItems: "center",
         justifyContent: "center",
         gap: "10px",
+        textDecoration: "none",
         '&:hover': {
             backgroundColor: theme.palette.secondary.main,
 
@@ -36,6 +38,47 @@ const Hero = () => {
         width: "100%",
         borderRadius: "50%",
     }))
+
+    const StyledInput = styled("input")(({theme})=>({
+        borderColor: theme.palette.primary.main,
+        borderRadius: "8px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        padding: "6px",
+        marginBottom: "8px",}))
+
+     const Styledtextarea = styled("textarea")(({theme}) => ({
+        borderColor: theme.palette.primary.main,
+        borderRadius: "8px",
+        width: "100%",
+        padding: "8px",
+        marginBottom: "8px",
+        resize: "none",
+        minHeight: "120px",
+        fontSize: '14px',
+        
+    }))
+
+    const StyledBox = styled(Box)(({theme})=>({
+        backgroundColor: theme.palette.secondary.contrastText,
+        borderRadius: "8px",
+        padding: "20px",
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        boxShadow: "24px",
+        width: "340px",
+        height: "450px",
+    }))
+
+
+
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
     return(
         <>
@@ -53,7 +96,7 @@ const Hero = () => {
 
                             <Grid container display={"flex"} justifyContent={"center"} spacing={3}>
                                 <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"}>
-                                    <StyledButton>
+                                    <StyledButton as="a" href="/Currículo-Lucas-Henrique.pdf" download="Lucas-Henrique-Curriculo.pdf">
                                         <DownloadIcon/>
                                         <Typography>
                                             Download Cv
@@ -61,7 +104,7 @@ const Hero = () => {
                                     </StyledButton>
                                 </Grid>
                                 <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"}>
-                                    <StyledButton >
+                                    <StyledButton onClick={handleOpen} >
                                         <EmailIcon/>
                                         <Typography>
                                             Contact me
@@ -69,7 +112,25 @@ const Hero = () => {
                                     </StyledButton>
                                 </Grid>
                             </Grid>
-                        </Grid>     
+                        </Grid>    
+                        <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+                            <Box>
+                                <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"}>
+                                    <StyledBox>
+                                        <Typography variant="h6" textAlign={"center"} marginBottom={"10px"}>Contact me!</Typography>
+                                        <Typography fontSize={"13px"} textAlign={"center"}>Hey! Tell me about your project and how I can help...</Typography>
+                                        <StyledInput type="E-mail" placeholder="your email" required/>
+                                        <StyledInput type="Name" placeholder="your name" required/>
+                                        <Styledtextarea  placeholder="message" required/>
+                                        <StyledButton type="submit">Send</StyledButton>
+                                        <Typography fontSize={"12px"} textAlign={"center"} marginTop={"10px"}>Or send me a message in other plataforms</Typography>
+                                        <Grid size={{xs:12, md:4}}>
+
+                                        </Grid>
+                                    </StyledBox>
+                                </Grid>
+                            </Box>
+                        </Modal>
                     </Grid>
                 </Container>
             </StyledHero>
