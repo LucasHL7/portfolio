@@ -96,7 +96,7 @@ const Hero = () => {
 
                             <Grid container display={"flex"} justifyContent={"center"} spacing={3}>
                                 <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"}>
-                                    <StyledButton as="a" href="/Currículo-Lucas-Henrique.pdf" download="Lucas-Henrique-Curriculo.pdf">
+                                    <StyledButton>
                                         <DownloadIcon/>
                                         <Typography>
                                             Download Cv
