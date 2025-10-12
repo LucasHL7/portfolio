@@ -49,6 +49,19 @@ const Hero = () => {
         fontFamily: "SUSE Mono",
         fontSize:"16px",
         fontWeight:"400",
+        cursor: "Pointer",
+        backgroundColor: "transparent",
+        borderRadius: "3px",
+        padding: "5px 15px",
+        width: "100%",
+        border: `1px solid ${theme.palette.primary.main}`,
+        display:"inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "10px",        "&:hover": {
+            backgroundColor: theme.palette.secondary.main,
+
+        }
     })) 
 
     const StyledInput = styled("input")(({theme})=>({
@@ -61,6 +74,7 @@ const Hero = () => {
         width: "100%",
         padding: "6px",
         marginBottom: "8px",
+        
     }))
 
      const Styledtextarea = styled("textarea")(({theme}) => ({
@@ -110,10 +124,10 @@ const Hero = () => {
 
                             <Grid container display={"flex"} justifyContent={"center"} spacing={3}>
                                 <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"}>
-                                    <StyledButton>
-                                        <DownloadIcon/>
-                                        <StyledLink href="public\Curriculo-Lucas-Henrique.pdf" download="Curriculo-Lucas-Henrique.pdf">Download Cv</StyledLink>
-                                    </StyledButton>
+                                        <StyledLink href="https://drive.google.com/file/d/1-IHEwWv67CyrjiUzUUFuQGBM53HAvW9k/view?usp=drive_link" download="Curriculo-Lucas-Henrique.pdf">
+                                            <DownloadIcon/>
+                                            Download Cv
+                                        </StyledLink>
                                 </Grid>
                                 <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"}>
                                     <StyledButton onClick={handleOpen}  >
