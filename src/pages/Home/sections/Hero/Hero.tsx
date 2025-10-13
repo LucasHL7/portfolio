@@ -154,7 +154,7 @@ const Hero = () => {
                                             <Typography fontSize={"12px"} textAlign={"center"} marginTop={"10px"} marginBottom={"10px"}>Or send me a message in other plataforms</Typography>
                                         </form>
                                         <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"space-evenly"} margin={""}>
-                                            <StyledLink href="https://mui.com/material-ui/material-icons/?query=wha&selected=WhatsApp"><WhatsAppIcon/></StyledLink>
+                                            <StyledLink href="https://api.whatsapp.com/send/?phone=86988844705&text&type=phone_number&app_absent=0"><WhatsAppIcon/></StyledLink>
                                             <StyledLink href="https://www.instagram.com/lucashls_0"><InstagramIcon/></StyledLink>
                                             <StyledLink href="https://www.linkedin.com/in/lucas-henrique-963a72211"><LinkedInIcon/></StyledLink>
                                         </Grid>
