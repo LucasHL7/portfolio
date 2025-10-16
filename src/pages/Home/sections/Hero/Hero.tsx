@@ -34,7 +34,6 @@ const Hero = () => {
         textDecoration: "none",
         "&:hover": {
             backgroundColor: theme.palette.secondary.main,
-
         }
     }))
 
@@ -54,7 +53,6 @@ const Hero = () => {
         borderRadius: "3px",
         padding: "5px 15px",
         width: "100%",
-        border: `1px solid ${theme.palette.primary.main}`,
         display:"inline-flex",
         alignItems: "center",
         justifyContent: "center",
@@ -124,7 +122,7 @@ const Hero = () => {
 
                             <Grid container display={"flex"} justifyContent={"center"} spacing={3}>
                                 <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"}>
-                                        <StyledLink href="https://drive.google.com/file/d/1-IHEwWv67CyrjiUzUUFuQGBM53HAvW9k/view?usp=drive_link" download="Curriculo-Lucas-Henrique.pdf">
+                                        <StyledLink href="https://drive.google.com/file/d/1-IHEwWv67CyrjiUzUUFuQGBM53HAvW9k/view?usp=drive_link" download="Curriculo-Lucas-Henrique.pdf" sx={{border: `1px solid`}}>
                                             <DownloadIcon/>
                                             Download Cv
                                         </StyledLink>
