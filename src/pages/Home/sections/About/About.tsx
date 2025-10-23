@@ -4,9 +4,9 @@ import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 const About = () => {
 
     const StyledAbout = styled("div")(()=> ({
-        backgroundColor: "white",
-        height:"520px",
-        padding: "0 20px",
+        padding: "10px 10px",
+        textAlign: "center",
+        marginBottom: "10px",
     }))
 
     const StyledBox = styled(Box)(({theme}) => ({
@@ -35,7 +35,7 @@ const About = () => {
     return(
         <>
             <StyledAbout >
-                <Container maxWidth="lg" >
+                <Container maxWidth="lg">
                     <Grid  marginTop={"30px"}/>
                     <Grid  >
                         <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"}>
