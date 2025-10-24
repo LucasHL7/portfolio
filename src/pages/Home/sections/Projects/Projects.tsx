@@ -1,7 +1,8 @@
 import { Box, Container, Grid, styled, Typography } from "@mui/material"
 import AnimationComponent from "../../../../components/AnimationComponent/AnimationComponent";
 import ProjectCard, { type ProjectCardProps } from "../../../../components/ProjectCard/ProjectCard";
-
+import doceDesejoSite from "/src/assets/images/Projects/doceDesejoSite.png"
+import AppEcomendas from "/src/assets/images/Projects/AppEcomendas.png"
 const Project = () =>{
 
     const StyledExperience = styled("div")(({ theme }) => ({
@@ -13,7 +14,7 @@ const Project = () =>{
         {
             title: "Doce Desejo",
             subtitle: "Landing Page para Encomendas",
-            srcImg: "/src/assets/images/Projects/doceDesejoSite.png",
+            srcImg: {doceDesejoSite},
             description: "Uma landing page desenvolvida como primeiro trabalho freelancer para minha antiga empresa, especializada em delivery de doces. A página inclui um formulário personalizado para encomendas de bolos personalizados e outros produtos que não estavam disponíveis no site principal.",
             technologies: "HTML, CSS e Js",
             websiteURL: "https://docedesejoencomendas.netlify.app",
@@ -22,7 +23,7 @@ const Project = () =>{
         {
             title: "Doce Desejo - App Interno",
             subtitle: "Sistema de Gestão de Encomendas",
-            srcImg: "/src/assets/images/Projects/AppEcomendas.png",
+            srcImg: {AppEcomendas},
             description: "Aplicativo desenvolvido para otimizar a organização interna dos funcionários da Doce Desejo, facilitando o gerenciamento de encomendas, controle de pedidos e melhorando o fluxo de trabalho da equipe. Esse foi meu segundo trabalho de freelancer para a empresa que ja eu tinha trabalhado anteriormente. ",
             technologies: "React Native, Node.js, FireBase, Expo",
             websiteURL: "https://github.com/LucasHL7/sweet-desire",
