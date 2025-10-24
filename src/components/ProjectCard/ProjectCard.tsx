@@ -3,7 +3,7 @@ import { Grid, styled, Typography } from "@mui/material";
 export interface ProjectCardProps {
     title: string;
     subtitle: string;
-    srcImg: string;
+    srcImg: any;
     description: string
     technologies: string
     websiteURL: string;
