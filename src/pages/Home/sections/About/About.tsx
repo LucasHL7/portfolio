@@ -49,7 +49,7 @@ const About = () => {
                                 <WorkspacePremiumIcon sx={{display:"block", mx:"auto"}}/>
                                 <StyledTypography variant="h6"> Experiência </StyledTypography>
                                 <StyledTypography> 2+ Anos </StyledTypography>
-                                <StyledTypography> Desenvolvimento <br/> Front-end </StyledTypography>
+                                <StyledTypography> Dev <br/> Front-end </StyledTypography>
                             </StyledBox>
                             <StyledBox>
                                 <WorkspacePremiumIcon sx={{display:"block", mx:"auto"}}/>

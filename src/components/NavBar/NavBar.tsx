@@ -92,9 +92,9 @@ const NavBar = () => {
                     </StyledButton>
                     <StyledMenu anchorOrigin={{vertical:"top", horizontal:"right"}} transformOrigin={{vertical:"top", horizontal:"right"}} open={Boolean(anchorNav)} onClose={closeNav} sx={{display:{xs:"flex", md:"none"}}}>
                         <StyledMenuList>
-                            <MenuItem onClick={() => handleSmoothScroll("about")}>About</MenuItem>
-                            <MenuItem onClick={() => handleSmoothScroll("skills")}>Skills</MenuItem>
-                            <MenuItem onClick={() => handleSmoothScroll("projects")}>Projects</MenuItem>
+                            <MenuItem onClick={() => handleSmoothScroll("about")}>Sobre</MenuItem>
+                            <MenuItem onClick={() => handleSmoothScroll("skills")}>Habilidades</MenuItem>
+                            <MenuItem onClick={() => handleSmoothScroll("projects")}>Projetos</MenuItem>
                         </StyledMenuList>
                     </StyledMenu>
                 </StyledBox>
