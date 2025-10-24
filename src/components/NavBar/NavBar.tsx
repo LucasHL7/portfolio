@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, Menu, MenuItem, MenuList, styled, Toolbar } from "@mui/material"
+import { AppBar, Box, Button, Link, Menu, MenuItem, MenuList, styled, Toolbar } from "@mui/material"
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
 
@@ -18,6 +18,11 @@ const NavBar = () => {
             backgroundColor: theme.palette.secondary.main,
         }
     }))
+
+    const StyledLinkNav = styled(Link)(() => ({
+        textDecoration: 'none'
+    }))
+
     const StyledButton = styled(Button)(({theme})=>({
         display:"flex",
         alignItems: "right",
@@ -60,13 +65,26 @@ const NavBar = () => {
         setAnchorNav(null);
     }
 
+    const handleSmoothScroll = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+            closeNav();
+        }
+    };
     return (
         <>
             <AppBar position="static">
                 <StyledToolbar sx={{display:{xs:"none", md:"flex"}}}>
-                    <StyledMenuItem>About</StyledMenuItem> 
-                    <StyledMenuItem>Skills</StyledMenuItem>
-                    <StyledMenuItem>Projects</StyledMenuItem>
+                    <StyledMenuItem onClick={() => handleSmoothScroll("about")}>
+                        <StyledLinkNav>Sobre</StyledLinkNav>
+                    </StyledMenuItem> 
+                    <StyledMenuItem  onClick={() => handleSmoothScroll("skills")}>
+                        <StyledLinkNav>Habilidades</StyledLinkNav>
+                    </StyledMenuItem>
+                    <StyledMenuItem  onClick={() => handleSmoothScroll("projects")}>
+                        <StyledLinkNav>Projetos</StyledLinkNav>
+                    </StyledMenuItem>
                 </StyledToolbar>
                 <StyledBox sx={{display:{sx:"flex", md:"none"}}}>
                     <StyledButton onClick={openNav} >
@@ -74,9 +92,9 @@ const NavBar = () => {
                     </StyledButton>
                     <StyledMenu anchorOrigin={{vertical:"top", horizontal:"right"}} transformOrigin={{vertical:"top", horizontal:"right"}} open={Boolean(anchorNav)} onClose={closeNav} sx={{display:{xs:"flex", md:"none"}}}>
                         <StyledMenuList>
-                            <MenuItem onClick={closeNav}>About</MenuItem>
-                            <MenuItem onClick={closeNav}>Skills</MenuItem>
-                            <MenuItem onClick={closeNav}>Projects</MenuItem>
+                            <MenuItem onClick={() => handleSmoothScroll("about")}>About</MenuItem>
+                            <MenuItem onClick={() => handleSmoothScroll("skills")}>Skills</MenuItem>
+                            <MenuItem onClick={() => handleSmoothScroll("projects")}>Projects</MenuItem>
                         </StyledMenuList>
                     </StyledMenu>
                 </StyledBox>

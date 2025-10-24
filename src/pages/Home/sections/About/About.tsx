@@ -37,40 +37,40 @@ const About = () => {
             <StyledAbout >
                 <Container maxWidth="lg">
                     <Grid  marginTop={"30px"}/>
-                    <Grid  >
-                        <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"}>
+                    <Grid>
+                        <Grid id="about" size={{xs:12, md:4}} display={"flex"} justifyContent={"center"}>
                             <Typography variant="h2">
-                                About me
+                                Sobre
                             </Typography>
                         </Grid>
                     </Grid>
                     <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"} marginTop={"20px"} >
                             <StyledBox>
                                 <WorkspacePremiumIcon sx={{display:"block", mx:"auto"}}/>
-                                <StyledTypography variant="h6"> Experience </StyledTypography>
-                                <StyledTypography> 2+ Years </StyledTypography>
-                                <StyledTypography> Front-end Development </StyledTypography>
+                                <StyledTypography variant="h6"> Experiência </StyledTypography>
+                                <StyledTypography> 2+ Anos </StyledTypography>
+                                <StyledTypography> Desenvolvimento <br/> Front-end </StyledTypography>
                             </StyledBox>
                             <StyledBox>
                                 <WorkspacePremiumIcon sx={{display:"block", mx:"auto"}}/>
-                                <StyledTypography  variant="h6"> Education </StyledTypography>
-                                <StyledTypography> Bachelor's Degree </StyledTypography>
-                                <StyledTypography> Computer Science  </StyledTypography>
+                                <StyledTypography  variant="h6"> Formação </StyledTypography>
+                                <StyledTypography> Bacharelado </StyledTypography>
+                                <StyledTypography> Ciência da Computação  </StyledTypography>
                             </StyledBox>
                     </Grid>
                     <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"} marginTop={"20px"} >
                         <Typography textAlign={"center"} sx={{}} >
-                            I'm a dedicated Frontend Developer with 2 years of experience creating 
-                            digital solutions that users love. My background in Level 2 technical support has given me 
-                            unique insights into user needs and problem-solving. I've built mobile apps with React Native, 
-                            developed landing pages for various small businesses, and mastered technologies like React, 
-                            Angular, and Python. I'm passionate about turning complex problems into intuitive, 
-                            beautiful interfaces.
+                            Sou Desenvolvedor Front-End formado em Ciência da Computação, com 2 anos de experiência atuando em projetos 
+                            freelancers. Minha trajetória me levou a transformar aprendizado constante em resultados concretos, desenvolvendo
+                            desde aplicações mobile com React Native até landing pages para pequenos e médios negócios. Domino tecnologias 
+                            como React, Angular e Python, e tenho especial apreço por criar interfaces que unem funcionalidade e experiência 
+                            intuitiva. trago para cada projeto não apenas expertise técnica, mas também responsabilidade, foco e a vontade de
+                            construir soluções que façam a diferença na vida das pessoas.
                         </Typography>
                     </Grid>
                     <Divider orientation="vertical" flexItem sx={{borderColor:"priary.main", borderWidth:1, mx:3, marginTop:"15px"}}/>
-                    <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"} marginTop={"20px"} >
-                        <Typography variant="h2"> Skills </Typography>
+                    <Grid id="skills" size={{xs:12, md:4}} display={"flex"} justifyContent={"center"} marginTop={"20px"} >
+                        <Typography variant="h2"> Habilidades </Typography>
                     </Grid>
                    <Grid >
                         <Grid size={{xs:12, md:4}}  marginTop={"20px"} display={"flex"}  justifyContent={'space-between'} sx={{display:{xs:"none", md:"flex"}}} >

@@ -118,7 +118,7 @@ const Hero = () => {
                         </Grid>
                         <Grid size={{ xs: 12, md: 8}} >
                             <Typography color="primary" variant="h1" textAlign={"center"}>Lucas Henrique</Typography>
-                            <Typography color="secondary" variant="h2" textAlign={"center"} paddingBottom={"5px"}>I"m a Front-end developer</Typography>
+                            <Typography color="secondary" variant="h2" textAlign={"center"} paddingBottom={"5px"}>Desenvolvedor <br/> Front-end</Typography>
 
                             <Grid container display={"flex"} justifyContent={"center"} spacing={3}>
                                 <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"}>
@@ -131,7 +131,7 @@ const Hero = () => {
                                     <StyledButton onClick={handleOpen}  >
                                         <EmailIcon/>
                                         <Typography>
-                                            Contact me
+                                            Me contate
                                         </Typography>
                                     </StyledButton>
                                 </Grid>
@@ -142,14 +142,14 @@ const Hero = () => {
                                 <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"center"}>
                                     <StyledBox>
                                         <form action="https://formsubmit.co/lhls2002@gmail.com" method="POST">
-                                            <Typography variant="h6" textAlign={"center"} marginBottom={"10px"}>Contact me!</Typography>
-                                            <Typography fontSize={"13px"} textAlign={"center"}>Hey! Tell me about your project and how I can help...</Typography>
-                                            <StyledInput type="name" name="name" placeholder="your name" required/>
-                                            <StyledInput type="email" name="email" placeholder="your email" required/>
-                                            <Typography fontSize={"15px"}>Your message:</Typography>
+                                            <Typography variant="h6" textAlign={"center"} marginBottom={"10px"}>Me contate!</Typography>
+                                            <Typography fontSize={"13px"} textAlign={"center"}>Olá! Conte-me sobre seu projeto e como posso ajudar...</Typography>
+                                            <StyledInput type="name" name="name" placeholder="Seu nome" required/>
+                                            <StyledInput type="email" name="email" placeholder="Seu e-mail" required/>
+                                            <Typography fontSize={"15px"}>Sua Mensagem:</Typography>
                                             <Styledtextarea name="text" required/>
-                                            <StyledButton type="submit">Send</StyledButton>
-                                            <Typography fontSize={"12px"} textAlign={"center"} marginTop={"10px"} marginBottom={"10px"}>Or send me a message in other plataforms</Typography>
+                                            <StyledButton type="submit">Enviar</StyledButton>
+                                            <Typography fontSize={"12px"} textAlign={"center"} marginTop={"10px"} marginBottom={"10px"}>Ou envie uma mensagem em outras plataformas</Typography>
                                         </form>
                                         <Grid size={{xs:12, md:4}} display={"flex"} justifyContent={"space-evenly"} margin={""}>
                                             <StyledLink href="https://api.whatsapp.com/send/?phone=86988844705&text&type=phone_number&app_absent=0"><WhatsAppIcon/></StyledLink>

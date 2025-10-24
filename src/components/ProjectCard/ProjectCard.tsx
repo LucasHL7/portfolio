@@ -82,10 +82,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </StyledTypography>
             <Grid container spacing={12} paddingTop={2}>
                 <Grid size={{xs:6}}>
-                    <StyledButton onClick={() => window.open(websiteURL)}>View Project</StyledButton>
+                    <StyledButton onClick={() => window.open(websiteURL)}>Ver Site</StyledButton>
                 </Grid>
                 <Grid size={{xs:6}}>
-                    <StyledButton onClick={() => window.open(codeURL)}>View Project</StyledButton>
+                    <StyledButton onClick={() => window.open(codeURL)}>Ver Projeto</StyledButton>
                 </Grid>
             </Grid>
         </StyledCard>

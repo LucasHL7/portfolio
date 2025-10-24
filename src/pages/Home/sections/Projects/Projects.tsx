@@ -11,41 +11,23 @@ const Project = () =>{
 
     const projects = [
         {
-            title: "Teste",
-            subtitle: "teste ",
-            srcImg: "src/img",
-            description: "Teste",
-            technologies: "Teste",
-            websiteURL: "teste",
-            codeURL:"site",
+            title: "Doce Desejo",
+            subtitle: "Landing Page para Encomendas",
+            srcImg: "/src/assets/images/Projects/doceDesejoSite.png",
+            description: "Uma landing page desenvolvida como primeiro trabalho freelancer para minha antiga empresa, especializada em delivery de doces. A página inclui um formulário personalizado para encomendas de bolos personalizados e outros produtos que não estavam disponíveis no site principal.",
+            technologies: "HTML, CSS e Js",
+            websiteURL: "https://docedesejoencomendas.netlify.app",
+            codeURL:"https://github.com/LucasHL7/doceDesejo",
         },
         {
-            title: "Teste",
-            subtitle: "teste ",
-            srcImg: "src/img",
-            description: "Teste",
-            technologies: "Teste",
-            websiteURL: "teste",
-            codeURL:"site",
+            title: "Doce Desejo - App Interno",
+            subtitle: "Sistema de Gestão de Encomendas",
+            srcImg: "/src/assets/images/Projects/AppEcomendas.png",
+            description: "Aplicativo desenvolvido para otimizar a organização interna dos funcionários da Doce Desejo, facilitando o gerenciamento de encomendas, controle de pedidos e melhorando o fluxo de trabalho da equipe. Esse foi meu segundo trabalho de freelancer para a empresa que ja eu tinha trabalhado anteriormente. ",
+            technologies: "React Native, Node.js, FireBase, Expo",
+            websiteURL: "https://github.com/LucasHL7/sweet-desire",
+            codeURL:"https://github.com/LucasHL7/sweet-desire",
         },
-        {
-            title: "Teste",
-            subtitle: "teste ",
-            srcImg: "src/img",
-            description: "Teste",
-            technologies: "Teste",
-            websiteURL: "teste",
-            codeURL:"site",
-        },
-        {
-            title: "Teste",
-            subtitle: "teste ",
-            srcImg: "src/img",
-            description: "Teste",
-            technologies: "Teste",
-            websiteURL: "teste",
-            codeURL:"site",
-        }
 
     ]
 
@@ -53,7 +35,7 @@ const Project = () =>{
         <StyledExperience>
             <Container maxWidth="lg">
                 <Box id="projects" pt={5} pb={3}>
-                    <Typography variant="h2" textAlign="center" color="secondary.contrastText">Projects</Typography>
+                    <Typography variant="h2" textAlign="center" color="secondary.contrastText">Projetos</Typography>
                 </Box>
                 <Grid container spacing={5} pb={3}>
                     {projects.map((project: ProjectCardProps, index: number) => (
