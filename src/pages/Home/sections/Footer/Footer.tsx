@@ -21,7 +21,7 @@ const Footer = () => {
                         </IconButton>
                     </Box>
                     <Typography textAlign="center" fontSize={"15px"}>
-                        © 2025 Lucas Henrique - Todos os direitos reservados.
+                        © 2026 Lucas Henrique - Todos os direitos reservados.
                     </Typography>
                 </Container>
             </Box>

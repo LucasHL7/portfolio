@@ -3,6 +3,7 @@ import AnimationComponent from "../../../../components/AnimationComponent/Animat
 import ProjectCard, { type ProjectCardProps } from "../../../../components/ProjectCard/ProjectCard";
 import doceDesejoSite from "/src/assets/images/Projects/doceDesejoSite.png"
 import AppEcomendas from "/src/assets/images/Projects/AppEcomendas.png"
+import ListaSuprema from "/src/assets/images/Projects/ListaSuprema.png";
 const Project = () =>{
 
     const StyledExperience = styled("div")(({ theme }) => ({
@@ -28,6 +29,15 @@ const Project = () =>{
             technologies: "React Native, Node.js, FireBase, Expo",
             websiteURL: "https://github.com/LucasHL7/sweet-desire",
             codeURL:"https://github.com/LucasHL7/sweet-desire",
+        },
+        {
+            title:"Lista Suprema",
+            subtitle:"Um aplicativo para lista de compras",
+            srcImg: ListaSuprema,
+            description:"Aplicativo desenvolvido para melhorar a organização financeira na hora de fazer compras no supermercado",
+            technologies:"React Native, Expo, TypeScript, Expo Router e expo-sqlite",
+            websiteURL:"https://github.com/LucasHL7/lista-suprema",
+            codeURL:"https://github.com/LucasHL7/lista-suprema",
         },
 
     ]
