@@ -1,32 +1,15 @@
-import { Box, Container, IconButton, Typography } from "@mui/material"
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import { Box, Typography } from "@mui/material";
+import { profile } from "../../../../data/profile";
 
 const Footer = () => {
+    return (
+        <Box component="footer" pb={{ xs: 6, md: 12 }}>
+            <Typography variant="body2" color="text.secondary" maxWidth={420} lineHeight={1.7}>
+                Feito por {profile.name} com React, TypeScript e Material UI. Publicado na Netlify. ©{" "}
+                {new Date().getFullYear()}
+            </Typography>
+        </Box>
+    );
+};
 
-    return(
-        <>
-            <Box paddingBottom={2} paddingTop={2}>
-                <Container maxWidth="sm">
-                    <Box display={"flex"} alignItems={"center"} justifyContent={"space-between"} paddingBottom={1}>
-                        <IconButton onClick={() => window.open("https://github.com/LucasHL7")}>
-                            <GitHubIcon/>
-                        </IconButton>
-                        <IconButton onClick={() => window.open("https://www.linkedin.com/in/lucas-henrique-963a72211")}>
-                            <LinkedInIcon/>
-                        </IconButton>
-                        <IconButton onClick={() => window.open("https://www.instagram.com/lucashls_0")}>
-                            <InstagramIcon/>
-                        </IconButton>
-                    </Box>
-                    <Typography textAlign="center" fontSize={"15px"}>
-                        © 2026 Lucas Henrique - Todos os direitos reservados.
-                    </Typography>
-                </Container>
-            </Box>
-        </>
-    )
-}
-
-export default Footer
+export default Footer;

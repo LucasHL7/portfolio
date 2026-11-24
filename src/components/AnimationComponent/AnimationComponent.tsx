@@ -1,68 +1,52 @@
-import { keyframes } from "@emotion/react"
-import { styled } from "@mui/system";
+import { styled } from "@mui/material";
 import { type ReactNode, useEffect, useRef, useState } from "react";
 
 interface AnimationComponentProps {
-    children: ReactNode,
-    moveDirection: "left" | "right"
+    children: ReactNode;
+    delay?: number;
 }
 
-const moveFromLeftToRight = keyframes`
-0% {
-    transform: translateX(-20vw);
-  }
-  100% {
-    transform: translateX(0);
-  }
-    `
+const RevealBox = styled("div", {
+    shouldForwardProp: (prop) => prop !== "visible" && prop !== "delay",
+})<{ visible: boolean; delay: number }>(({ visible, delay }) => ({
+    height: "100%",
+    opacity: visible ? 1 : 0,
+    transform: visible ? "none" : "translateY(12px)",
+    transition: `opacity 0.5s ease ${delay}ms, transform 0.5s ease ${delay}ms`,
+    "@media (prefers-reduced-motion: reduce)": {
+        opacity: 1,
+        transform: "none",
+        transition: "none",
+    },
+}));
 
-const moveFromRightToLeft = keyframes`
-0% {
-    transform: translateX(20vw);
-  }
-  100% {
-    transform: translateX(0);
-  }
-    `
-
-const AnimationComponent: React.FC<AnimationComponentProps> = ({ children, moveDirection }) => {
-
-    const componentRef = useRef(null);
-    const [startAnimation, setStartAnimation] = useState(false);
+const AnimationComponent = ({ children, delay = 0 }: AnimationComponentProps) => {
+    const ref = useRef<HTMLDivElement>(null);
+    const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+        const node = ref.current;
+        if (!node) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
                 if (entry.isIntersecting) {
-                    setStartAnimation(true);
+                    setVisible(true);
                     observer.disconnect();
                 }
-            });
-        });
-        if (componentRef.current) {
-            observer.observe(componentRef.current);
-        }
+            },
+            { threshold: 0.15 }
+        );
+        observer.observe(node);
 
-        return () => {
-            observer.disconnect();
-        };
+        return () => observer.disconnect();
     }, []);
 
-    const StyledAnimationComponent = styled("div")<{ startAnimation: boolean, moveDirection: string }>(({ startAnimation, moveDirection }) => ({
-        animation: startAnimation ? `${moveDirection} 1s linear` : "none"
-    }));
-
     return (
-        <StyledAnimationComponent
-            ref={componentRef}
-            startAnimation={startAnimation}
-            moveDirection={
-                moveDirection === "right" ? moveFromLeftToRight : moveFromRightToLeft
-            }
-        >
+        <RevealBox ref={ref} visible={visible} delay={delay}>
             {children}
-        </StyledAnimationComponent>
-    )
-}
+        </RevealBox>
+    );
+};
 
-export default AnimationComponent
+export default AnimationComponent;
