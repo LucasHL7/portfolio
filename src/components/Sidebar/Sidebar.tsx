@@ -1,4 +1,5 @@
-import { Box, IconButton, Link, Stack, styled, Typography } from "@mui/material";
+import { Box, Button, IconButton, Link, Stack, styled, Typography } from "@mui/material";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
@@ -12,7 +13,7 @@ const Wrapper = styled("header")(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    paddingTop: theme.spacing(8),
+    paddingTop: theme.spacing(11),
     paddingBottom: theme.spacing(4),
     [theme.breakpoints.up("md")]: {
         position: "sticky",
@@ -90,18 +91,23 @@ const Sidebar = () => {
                     {profile.tagline}
                 </Typography>
 
-                <Link
-                    href={profile.cvURL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    underline="hover"
-                    color="text.primary"
-                    sx={{ display: "inline-flex", alignItems: "center", gap: 0.5, mt: 3, fontWeight: 600 }}
-                >
-                    Ver currículo <ArrowOutwardIcon fontSize="small" />
-                </Link>
+                <Stack direction="row" alignItems="center" spacing={3} mt={3}>
+                    <Button variant="contained" href="#contact" endIcon={<MailOutlineIcon />}>
+                        Fale comigo
+                    </Button>
+                    <Link
+                        href={profile.cvURL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        underline="hover"
+                        color="text.primary"
+                        sx={{ display: "inline-flex", alignItems: "center", gap: 0.5, fontWeight: 600 }}
+                    >
+                        Currículo <ArrowOutwardIcon fontSize="small" />
+                    </Link>
+                </Stack>
 
-                <Stack component="nav" aria-label="Seções" mt={5} spacing={0.5} sx={{ display: { xs: "none", md: "flex" } }}>
+                <Stack component="nav" aria-label="Seções" mt={4} spacing={0.5} sx={{ display: { xs: "none", md: "flex" } }}>
                     {navItems.map((item) => (
                         <NavLink key={item.id} href={`#${item.id}`} active={active === item.id}>
                             {item.label}
