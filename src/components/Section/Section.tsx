@@ -8,25 +8,10 @@ const Wrapper = styled("section")(({ theme }) => ({
     },
 }));
 
-/** No celular o título fica grudado no topo enquanto a seção rola. */
 const Heading = styled(Box)(({ theme }) => ({
-    position: "sticky",
-    top: 0,
-    zIndex: 10,
-    margin: theme.spacing(0, -3, 3),
-    padding: theme.spacing(2, 3),
-    backgroundColor: "rgba(20, 21, 24, 0.85)",
-    backdropFilter: "blur(8px)",
-    [theme.breakpoints.up("sm")]: {
-        margin: theme.spacing(0, -6, 3),
-        padding: theme.spacing(2, 6),
-    },
+    marginBottom: theme.spacing(3),
     [theme.breakpoints.up("md")]: {
-        position: "static",
-        margin: theme.spacing(0, 0, 4),
-        padding: 0,
-        backgroundColor: "transparent",
-        backdropFilter: "none",
+        marginBottom: theme.spacing(4),
     },
 }));
 

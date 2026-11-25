@@ -42,7 +42,11 @@ let theme = createTheme({
             styleOverrides: {
                 html: {
                     scrollBehavior: "smooth",
-                    scrollPaddingTop: "16px",
+                    // espaço da barra de navegação fixa no celular
+                    scrollPaddingTop: "68px",
+                },
+                "@media (min-width: 900px)": {
+                    html: { scrollPaddingTop: "16px" },
                 },
                 "@media (prefers-reduced-motion: reduce)": {
                     html: { scrollBehavior: "auto" },
